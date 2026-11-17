@@ -1,7 +1,8 @@
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
+// base './' lets the built site work from any sub-path (e.g. GitHub Pages).
 export default defineConfig({
+  base: './',
   plugins: [react()],
-})
+});
