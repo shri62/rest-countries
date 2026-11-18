@@ -2,28 +2,28 @@ import { Route, Routes } from 'react-router-dom';
 import { Container } from './components/Container';
 import { Header } from './components/Header';
 import { CountryPage } from './pages/CountryPage';
-import { HomePage } from './pages/HomePage'; // your file is HomePage.tsx
-import { NotFoundPage } from './pages/NotFoundPage'; // your file is NotFoundPage.tsx
+import { Home } from './pages/Home';
+import { NotFound } from './pages/NotFound';
 
-// Main layout: header on every page + one page in the middle
+// The main layout of the app. The header shows on every page,
+// and the page content changes depending on the URL.
 export default function App() {
+  // Parts of the return below:
+  // - skip-link: lets keyboard users jump past the header to the main content
+  // - Header: logo and theme toggle
+  // - Routes: "/" shows Home, "/country/:code" shows one country,
+  //   anything else shows the NotFound page
   return (
     <>
-      {/* Hidden link, shows on Tab, jumps to main content */}
       <a className="skip-link" href="#main">
         Skip to content
       </a>
-
       <Header />
-
       <Container as="main" id="main" className="main">
         <Routes>
-          {/* Home page */}
-          <Route path="/" element={<HomePage />} />
-          {/* One country, e.g. /country/FRA */}
+          <Route path="/" element={<Home />} />
           <Route path="/country/:code" element={<CountryPage />} />
-          {/* Any wrong URL */}
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Container>
     </>
