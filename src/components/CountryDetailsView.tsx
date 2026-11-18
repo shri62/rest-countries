@@ -3,7 +3,7 @@ import { BorderCountries } from './BorderCountries';
 import { InfoItem } from './InfoItem';
 
 // Shows the full details of one country (used on the detail page)
-export function CountryDetailView({ country }: { country: CountryDetail }) {
+export function CountryDetailsView({ country }: { country: CountryDetail }) {
   // Take the first native name from the object, if there is one
   const nativeName = Object.values(country.name.nativeName ?? {})[0]?.common;
 
