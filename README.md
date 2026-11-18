@@ -3,7 +3,8 @@
 This is my REST Countries project for Per Scholas. It shows all the countries in the world.
 You can search a country, filter by region and change to dark mode.
 
-Live site: https://YOUR-SITE.netlify.app
+Live site: Live site: https://shri-rest-countries.netlify.app
+
 
 GitHub: https://github.com/shri62/rest-countries
 
