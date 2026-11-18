@@ -10,7 +10,8 @@ export function BorderCountries({ codes }: { codes: string[] }) {
 
   // Ask the API for the names of the border countries
   const { data, loading, error } = useFetch(
-    (signal) => fetchBorderCountries(codes, signal),
+        () => fetchBorderCountries(codes),
+
     [key],
   );
 

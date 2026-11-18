@@ -345,3 +345,8 @@ img {
     font-size: 2rem;
   }
 }
+
+/* Detail page text is 16px in the design */
+.detail {
+  font-size: 1rem;
+}
